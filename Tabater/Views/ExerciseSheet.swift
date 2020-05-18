@@ -1,5 +1,5 @@
 //
-//  OrderSheet.swift
+//  ExerciseSheet.swift
 //  Tabater
 //
 //  Created by Marek Žiška on 18/05/2020.
@@ -8,8 +8,7 @@
 
 import SwiftUI
 
-struct OrderSheet: View {
-       
+struct ExerciseSheet: View {
     let pizzaTypes = ["Pizza Margherita", "Greek Pizza", "Pizza Supreme", "Pizza California", "New York Pizza"]
     
     @Environment(\.managedObjectContext) var managedObjectContext

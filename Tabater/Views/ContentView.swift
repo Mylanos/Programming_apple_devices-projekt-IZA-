@@ -23,8 +23,10 @@ struct ContentView: View {
     init(viewRouter: ViewRouter, sharedTimerManager: TimerManager) {
         let appearance = UINavigationBarAppearance()
         
+        // prebera ViewRouter vytvoreny v sceneDelegate
         self.viewRouter = viewRouter
         
+        // prebera TimerManager vytvoreny v sceneDelegate
         self.sharedTimerManager = sharedTimerManager
         
         // transparetny background nav baru
@@ -64,10 +66,10 @@ struct ContentView: View {
                                 .offset(x: self.viewRouter.viewMenu ? geometry.size.width/2 : 0)
                                 .disabled( self.viewRouter.viewMenu ? true : false)
                                 .padding(.top, 5)
-                        }
                         // zobraz view s historiou cviceni
+                        }
                         else if self.viewRouter.currentPage == .historyPage{
-                               HistoryView(showOrderSheet: false, viewRouter: self.viewRouter).environment(\.managedObjectContext, self.managedObjectContext)
+                               HistoryView(showExerciseSheet: false, viewRouter: self.viewRouter).environment(\.managedObjectContext, self.managedObjectContext)
                                 .frame(width: geometry.size.width, height: geometry.size.height)
                                 .offset(x: self.viewRouter.viewMenu ? geometry.size.width/2 : 0)
                                 .disabled(self.viewRouter.viewMenu ? true : false)
@@ -92,13 +94,13 @@ struct ContentView: View {
                         }))
                         
                 }
-                    
+            // pri detekcii dragu zavolat obsluhu viewu a pocita smer dragu pre zobrazenie menu
             }
             .gesture(self.viewRouter.drag)
         }
     }
 }
-
+// preview
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         

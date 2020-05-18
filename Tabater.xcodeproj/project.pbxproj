@@ -24,11 +24,11 @@
 		40F37DA224720CB80042080E /* ClockInitialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F37DA124720CB80042080E /* ClockInitialView.swift */; };
 		40F37DA424720D980042080E /* ClockStoppedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F37DA324720D980042080E /* ClockStoppedView.swift */; };
 		40F37DDC2472857E0042080E /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F37DDB2472857D0042080E /* HistoryView.swift */; };
-		40F37DDE2472877C0042080E /* OrderSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F37DDD2472877C0042080E /* OrderSheet.swift */; };
 		40F37DE7247294210042080E /* ExerciseHistory+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F37DE5247294210042080E /* ExerciseHistory+CoreDataClass.swift */; };
 		40F37DE8247294210042080E /* ExerciseHistory+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F37DE6247294210042080E /* ExerciseHistory+CoreDataProperties.swift */; };
 		40F37DEA247304820042080E /* ClockContinuesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F37DE9247304820042080E /* ClockContinuesView.swift */; };
 		40F37DEC24732B5F0042080E /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F37DEB24732B5F0042080E /* TimerView.swift */; };
+		40F37DEE247336290042080E /* ExerciseSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F37DED247336290042080E /* ExerciseSheet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,11 +62,11 @@
 		40F37DA124720CB80042080E /* ClockInitialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockInitialView.swift; sourceTree = "<group>"; };
 		40F37DA324720D980042080E /* ClockStoppedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockStoppedView.swift; sourceTree = "<group>"; };
 		40F37DDB2472857D0042080E /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
-		40F37DDD2472877C0042080E /* OrderSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderSheet.swift; sourceTree = "<group>"; };
 		40F37DE5247294210042080E /* ExerciseHistory+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExerciseHistory+CoreDataClass.swift"; sourceTree = "<group>"; };
 		40F37DE6247294210042080E /* ExerciseHistory+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExerciseHistory+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		40F37DE9247304820042080E /* ClockContinuesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockContinuesView.swift; sourceTree = "<group>"; };
 		40F37DEB24732B5F0042080E /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+		40F37DED247336290042080E /* ExerciseSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseSheet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,9 +148,9 @@
 				40F37DA124720CB80042080E /* ClockInitialView.swift */,
 				40F37DA324720D980042080E /* ClockStoppedView.swift */,
 				40F37DDB2472857D0042080E /* HistoryView.swift */,
-				40F37DDD2472877C0042080E /* OrderSheet.swift */,
 				40F37DE9247304820042080E /* ClockContinuesView.swift */,
 				40F37DEB24732B5F0042080E /* TimerView.swift */,
+				40F37DED247336290042080E /* ExerciseSheet.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -290,6 +290,7 @@
 				407413E4246EAECA001EB2A6 /* setDateFormatter.swift in Sources */,
 				40F37DA424720D980042080E /* ClockStoppedView.swift in Sources */,
 				407413E6246EAF5E001EB2A6 /* ClockView.swift in Sources */,
+				40F37DEE247336290042080E /* ExerciseSheet.swift in Sources */,
 				407413A2246DC107001EB2A6 /* AppDelegate.swift in Sources */,
 				407413A4246DC107001EB2A6 /* SceneDelegate.swift in Sources */,
 				407413A9246DC107001EB2A6 /* ContentView.swift in Sources */,
@@ -300,7 +301,6 @@
 				40F37DE7247294210042080E /* ExerciseHistory+CoreDataClass.swift in Sources */,
 				40F37DA224720CB80042080E /* ClockInitialView.swift in Sources */,
 				40F37DDC2472857E0042080E /* HistoryView.swift in Sources */,
-				40F37DDE2472877C0042080E /* OrderSheet.swift in Sources */,
 				40F37D9E2471CC520042080E /* viewRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

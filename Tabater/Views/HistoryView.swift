@@ -9,23 +9,29 @@
 import SwiftUI
 import CoreData
 
+//zobrazuje hostoriu treningov
 struct HistoryView: View {
-    @State var showOrderSheet = false
+    // true ak bolo poziadane o zobrazenie blizsieho infa o treningu
+    @State var showExerciseSheet = false
     
+    // vyuzite na ulozenie si indexu pozadovaneho elementu v liste záznamov z CoreData
     @ObservedObject var viewRouter: ViewRouter
     
+    // vyuzite pre delete jednotlivych zaznamov z CoreData
     @Environment(\.managedObjectContext) var managedObjectContext
     
+    // nahravanie dat z CoreData
     @FetchRequest(entity: ExerciseHistory.entity(),
                   sortDescriptors: [])
-    
     var exercises: FetchedResults<ExerciseHistory>
-        
+    
+    // extension s pozadovanym formatom
     var dateFormatter = DateFormatter()
     
     var body: some View {
-            
+            // list všektých záznamov
             List {
+                // enumeratedArray -> extension transformuje pole na tuple, dvojica index element
                 ForEach(exercises.enumeratedArray(), id: \.element) { index, item in
                     HStack {
                         VStack(alignment: .leading) {
@@ -39,10 +45,11 @@ struct HistoryView: View {
                         Button("Info", action: {
                             self.viewRouter.selExercIndex = index
                             print("Open order sheet ")
-                            self.showOrderSheet.toggle()
+                            self.showExerciseSheet.toggle()
                         })
                         
                     }
+                // zmaze zaznam pri dragu nad zaznamom v liste
                 }
                 .onDelete { indexSet in
                     for index in indexSet {
@@ -50,9 +57,10 @@ struct HistoryView: View {
                         self.managedObjectContext.delete(self.exercises[index])
                     }
                 }
+            // zobrazenie sheetu ak bol rozkliknuty niektory zo zaznamov
             }
-            .sheet(isPresented: $showOrderSheet) {
-                OrderSheet(viewRouter: self.viewRouter, exercises: self.exercises).environment(\.managedObjectContext, self.managedObjectContext)
+            .sheet(isPresented: $showExerciseSheet) {
+                ExerciseSheet(viewRouter: self.viewRouter, exercises: self.exercises).environment(\.managedObjectContext, self.managedObjectContext)
             }
         
     }

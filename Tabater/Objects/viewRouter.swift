@@ -16,7 +16,7 @@ enum viewPages{
     case historyPage
 }
 
-// ma na starosti prepinanie medzi views
+// ma na starosti prepinanie medzi views, uklada data ktore sa modifikuju vi view
 class ViewRouter: ObservableObject {
     
     // premieta elementy pre odoberatelov
