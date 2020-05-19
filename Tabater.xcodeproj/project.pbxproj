@@ -29,6 +29,7 @@
 		40F37DEA247304820042080E /* ClockContinuesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F37DE9247304820042080E /* ClockContinuesView.swift */; };
 		40F37DEC24732B5F0042080E /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F37DEB24732B5F0042080E /* TimerView.swift */; };
 		40F37DEE247336290042080E /* ExerciseSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F37DED247336290042080E /* ExerciseSheet.swift */; };
+		40F37DF024733D8D0042080E /* ProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F37DEF24733D8D0042080E /* ProgressBarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		40F37DE9247304820042080E /* ClockContinuesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockContinuesView.swift; sourceTree = "<group>"; };
 		40F37DEB24732B5F0042080E /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		40F37DED247336290042080E /* ExerciseSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseSheet.swift; sourceTree = "<group>"; };
+		40F37DEF24733D8D0042080E /* ProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 				40F37DE9247304820042080E /* ClockContinuesView.swift */,
 				40F37DEB24732B5F0042080E /* TimerView.swift */,
 				40F37DED247336290042080E /* ExerciseSheet.swift */,
+				40F37DEF24733D8D0042080E /* ProgressBarView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 				407413E6246EAF5E001EB2A6 /* ClockView.swift in Sources */,
 				40F37DEE247336290042080E /* ExerciseSheet.swift in Sources */,
 				407413A2246DC107001EB2A6 /* AppDelegate.swift in Sources */,
+				40F37DF024733D8D0042080E /* ProgressBarView.swift in Sources */,
 				407413A4246DC107001EB2A6 /* SceneDelegate.swift in Sources */,
 				407413A9246DC107001EB2A6 /* ContentView.swift in Sources */,
 				40F37DEC24732B5F0042080E /* TimerView.swift in Sources */,

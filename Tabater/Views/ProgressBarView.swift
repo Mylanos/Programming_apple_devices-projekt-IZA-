@@ -9,13 +9,20 @@
 import SwiftUI
 
 struct ProgressBarView: View {
+    
+    @ObservedObject var timerManager: TimerManager
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+         VStack {
+                   ZStack(alignment: .leading) {
+                        RoundedRectangle(cornerRadius: 20)
+                            .foregroundColor(.gray)
+                            .frame(width: 300, height: 20)
+                        RoundedRectangle(cornerRadius: 20)
+                            .foregroundColor(timerManager.timerMode != .resting ? .blue : .yellow)
+                            .frame(width: 300*timerManager.currentProgress, height: 20)
+                   }
+               }
     }
 }
 
-struct ProgressBarView_Previews: PreviewProvider {
-    static var previews: some View {
-        ProgressBarView()
-    }
-}

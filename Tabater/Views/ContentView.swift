@@ -65,7 +65,7 @@ struct ContentView: View {
                                 .frame(width: geometry.size.width, height: geometry.size.height)
                                 .offset(x: self.viewRouter.viewMenu ? geometry.size.width/2 : 0)
                                 .disabled( self.viewRouter.viewMenu ? true : false)
-                                .padding(.top, 5)
+                                .padding(.top, 15)
                         // zobraz view s historiou cviceni
                         }
                         else if self.viewRouter.currentPage == .historyPage{

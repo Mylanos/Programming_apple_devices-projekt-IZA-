@@ -35,6 +35,8 @@ class TimerManager: ObservableObject {
         }
     }
     
+    var currentProgress: CGFloat = 0.0
+    
     // uklada si
     @Published var stopwatch: TimeStopwatch
     
@@ -88,6 +90,7 @@ class TimerManager: ObservableObject {
         timerMode = .running
         timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { timer in
             self.stopwatch.updateTime()
+            self.updateProgressBarValue()
             if(self.stopwatch.done){
                 self.timerMode = .initial
             }
@@ -99,6 +102,17 @@ class TimerManager: ObservableObject {
             }
         })
         
+    }
+    
+    func updateProgressBarValue(){
+        withAnimation(){
+            if(self.timerMode == .resting){
+                self.currentProgress = CGFloat(stopwatch.calcTimeInSeconds()) / CGFloat(selectionRestLength)
+            }
+            else if(self.timerMode == .running){
+                self.currentProgress = CGFloat(stopwatch.calcTimeInSeconds()) / CGFloat(selectionExerciseLength)
+            }
+        }
     }
     
     func setRunning(){

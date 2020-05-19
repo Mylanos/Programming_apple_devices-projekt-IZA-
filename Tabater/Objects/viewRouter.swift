@@ -27,6 +27,7 @@ class ViewRouter: ObservableObject {
     enum SwipeDirection: String {
         case left, right, up, down, none
     }
+
     
     // prepinanie hlavneho textu v navigation bare
     var currentPage: viewPages = .mainPage{

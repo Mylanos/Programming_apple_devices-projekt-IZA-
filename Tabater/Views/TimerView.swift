@@ -15,19 +15,13 @@ struct TimerView: View {
     
     var body: some View {
         Group{
-          /*  GeometryReader { geometry in
-                ZStack {
-                    Rectangle().frame(width: geometry.size.width , height: geometry.size.height)
-                        .opacity(0.3)
-                        .foregroundColor(Color(UIColor.systemTeal))
-                }.cornerRadius(45.0)
-            }
-            */
+            ProgressBarView(timerManager: timerManager)
+            
             // Text zobrazuje text na zaklade aktualneho modu casovaca
             Text(self.timerManager.stateExerciseDescription)
                 .font(.custom("Helvettica Neue", size: 28))
-                .padding(.bottom, 30)
-                .padding(.top, 40)
+                .padding(.bottom, 10)
+                .padding(.top, 10)
             
             // Aktualny cas, pred zacatim casovaca je urcena celkova dlzka cvicenia, po zapocati prebieho odpocet od 0
             Text(timerManager.timerMode != .initial ? timerManager.stopwatch.getTimeString() : timerManager.stopwatch.getDurationTimeString())
@@ -39,7 +33,7 @@ struct TimerView: View {
                 .aspectRatio(contentMode: .fit)
                 .padding(.bottom, 20)
                 .frame(width: 170, height: 160)
-                .foregroundColor(.blue)
+                .foregroundColor(timerManager.timerMode != .resting ? .blue : .yellow)
                 .onTapGesture{
                     (self.timerManager.timerMode == .running || self.timerManager.timerMode == .resting) ? self.timerManager.pause() : self.timerManager.start()
                     
